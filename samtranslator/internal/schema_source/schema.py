@@ -17,6 +17,7 @@ from samtranslator.internal.schema_source import (
     aws_serverless_layerversion,
     aws_serverless_simpletable,
     aws_serverless_statemachine,
+    aws_serverless_graphqlapi,
 )
 from samtranslator.internal.schema_source.common import BaseModel, LenientBaseModel
 
@@ -37,6 +38,7 @@ Resources = Union[
     aws_serverless_api.Resource,
     aws_serverless_httpapi.Resource,
     aws_serverless_application.Resource,
+    aws_serverless_graphqlapi.Resource,
 ]
 
 
