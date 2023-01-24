@@ -57,6 +57,38 @@ from samtranslator.model.connector_profiles.profile import (
     profile_replace,
     verify_profile_variables_replaced,
 )
+
+import samtranslator.model.eventsources
+import samtranslator.model.eventsources.pull
+import samtranslator.model.eventsources.push
+import samtranslator.model.eventsources.cloudwatchlogs
+import samtranslator.model.eventsources.scheduler
+from .api.api_generator import ApiGenerator
+from .api.http_api_generator import HttpApiGenerator
+from .packagetype import ZIP, IMAGE
+from .s3_utils.uri_parser import construct_s3_location_object, construct_image_code_object
+from .tags.resource_tagging import get_tag_list
+from samtranslator.metrics.method_decorator import cw_timer
+from samtranslator.model import (
+    ResourceResolver,
+    PassThroughProperty,
+    PropertyType,
+    SamResourceMacro,
+    Resource,
+    ResourceTypeResolver,
+    Property,
+)
+from samtranslator.model.apigateway import (
+    ApiGatewayDeployment,
+    ApiGatewayStage,
+    ApiGatewayDomainName,
+    ApiGatewayUsagePlan,
+    ApiGatewayUsagePlanKey,
+    ApiGatewayApiKey,
+)
+from samtranslator.model.apigatewayv2 import ApiGatewayV2Stage, ApiGatewayV2DomainName
+from samtranslator.model.architecture import ARM64, X86_64
+from samtranslator.model.cloudformation import NestedStack
 from samtranslator.model.dynamodb import DynamoDBTable
 from samtranslator.model.exceptions import InvalidEventException, InvalidResourceException
 from samtranslator.model.iam import IAMManagedPolicy, IAMRole, IAMRolePolicies
@@ -88,6 +120,7 @@ from samtranslator.model.types import IS_DICT, IS_STR, PassThrough, any_type, di
 from samtranslator.model.xray_utils import get_xray_managed_policy_name
 from samtranslator.translator import logical_id_generator
 from samtranslator.translator.arn_generator import ArnGenerator
+from samtranslator.model.appsync import GraphQLApi, Auth
 from samtranslator.utils.types import Intrinsicable
 from samtranslator.validator.value_validator import sam_expect
 
