@@ -5689,7 +5689,75 @@
       "title": "ScheduleV2EventProperties",
       "type": "object"
     },
-    "samtranslator__internal__schema_source__aws_serverless_httpapi__Auth": {
+    "schema_source__aws_serverless_graphqlapi__Auth": {
+      "additionalProperties": false,
+      "properties": {
+        "Type": {
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "Type"
+      ],
+      "title": "Auth",
+      "type": "object"
+    },
+    "schema_source__aws_serverless_graphqlapi__Properties": {
+      "additionalProperties": false,
+      "properties": {
+        "Auth": {
+          "$ref": "#/definitions/schema_source__aws_serverless_graphqlapi__Auth"
+        },
+        "Name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "SchemaInline": {
+          "title": "Schemainline",
+          "type": "string"
+        },
+        "SchemaUri": {
+          "title": "Schemauri",
+          "type": "string"
+        },
+        "Tags": {
+          "title": "Tags",
+          "type": "object"
+        },
+        "XrayEnabled": {
+          "title": "Xrayenabled",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "Auth"
+      ],
+      "title": "Properties",
+      "type": "object"
+    },
+    "schema_source__aws_serverless_graphqlapi__Resource": {
+      "additionalProperties": false,
+      "properties": {
+        "Properties": {
+          "$ref": "#/definitions/schema_source__aws_serverless_graphqlapi__Properties"
+        },
+        "Type": {
+          "enum": [
+            "AWS::Serverless::GraphQLApi"
+          ],
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "Type",
+        "Properties"
+      ],
+      "title": "Resource",
+      "type": "object"
+    },
+    "schema_source__aws_serverless_httpapi__Auth": {
       "additionalProperties": false,
       "properties": {
         "Authorizers": {
