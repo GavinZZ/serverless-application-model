@@ -40,6 +40,7 @@ from samtranslator.model.apigateway import (
     ApiGatewayUsagePlanKey,
 )
 from samtranslator.model.apigatewayv2 import ApiGatewayV2DomainName, ApiGatewayV2Stage
+from samtranslator.model.appsync import Auth, GraphQLApi, GraphQLSchema
 from samtranslator.model.architecture import ARM64, X86_64
 from samtranslator.model.cloudformation import NestedStack
 from samtranslator.model.connector.connector import (
@@ -120,7 +121,6 @@ from samtranslator.model.types import IS_DICT, IS_STR, PassThrough, any_type, di
 from samtranslator.model.xray_utils import get_xray_managed_policy_name
 from samtranslator.translator import logical_id_generator
 from samtranslator.translator.arn_generator import ArnGenerator
-from samtranslator.model.appsync import GraphQLApi, Auth
 from samtranslator.utils.types import Intrinsicable
 from samtranslator.validator.value_validator import sam_expect
 
