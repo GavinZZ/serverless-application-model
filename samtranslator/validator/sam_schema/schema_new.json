@@ -111,12 +111,8 @@
                       "AWS::Serverless::SimpleTable",
                       "AWS::Serverless::StateMachine",
                       "AWS::Serverless::Connector",
-<<<<<<< HEAD
                       "AWS::Serverless::GraphQLApi",
                       "AWS::Serverless::GraphQLDataSource"
-=======
-                      "AWS::Serverless::GraphQLApi"
->>>>>>> acf74b11 (feat: create high level AppSync::GraphQLApi properties mapping (#2803))
                     ]
                   }
                 }

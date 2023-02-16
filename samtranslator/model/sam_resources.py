@@ -20,6 +20,14 @@ from samtranslator.internal.model.appsync import (
 )
 from samtranslator.internal.intrinsics import resolve_string_parameter_in_resource
 from samtranslator.internal.types import GetManagedPolicyMap
+from samtranslator.internal.model.appsync import (
+    SUPPORTED_DATASOURCES,
+    DataSource,
+    DeltaSyncConfigType,
+    DynamoDBConfigType,
+    GraphQLApi,
+    GraphQLSchema,
+)
 from samtranslator.intrinsics.resolver import IntrinsicsResolver
 from samtranslator.metrics.method_decorator import cw_timer
 from samtranslator.model import (
@@ -40,7 +48,6 @@ from samtranslator.model.apigateway import (
     ApiGatewayUsagePlanKey,
 )
 from samtranslator.model.apigatewayv2 import ApiGatewayV2DomainName, ApiGatewayV2Stage
-from samtranslator.model.appsync import Auth, GraphQLApi, GraphQLSchema
 from samtranslator.model.architecture import ARM64, X86_64
 from samtranslator.model.cloudformation import NestedStack
 from samtranslator.model.connector.connector import (

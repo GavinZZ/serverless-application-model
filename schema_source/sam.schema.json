@@ -570,6 +570,7 @@
       "title": "DeploymentPreference",
       "type": "object"
     },
+<<<<<<< HEAD
     "DocumentDBEvent": {
       "additionalProperties": false,
       "properties": {
@@ -638,15 +639,41 @@
           "$ref": "#/definitions/PassThroughProp"
         },
         "StartingPositionTimestamp": {
+=======
+    "DynamoDBConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "DeltaSync": {
+          "$ref": "#/definitions/DeltaSyncConfig"
+        },
+        "Region": {
+          "title": "Region",
+          "type": "string"
+        },
+        "TableName": {
+          "title": "Tablename",
+          "type": "string"
+        },
+        "UseCallerCredentials": {
+          "$ref": "#/definitions/PassThroughProp"
+        },
+        "Versioned": {
+>>>>>>> dc8e028e (feat: make AppSync::DataSource mappings (DynamoDB) (#2906))
           "$ref": "#/definitions/PassThroughProp"
         }
       },
       "required": [
+<<<<<<< HEAD
         "Cluster",
         "DatabaseName",
         "SourceAccessConfigurations"
       ],
       "title": "DocumentDBEventProperties",
+=======
+        "TableName"
+      ],
+      "title": "DynamoDBConfig",
+>>>>>>> dc8e028e (feat: make AppSync::DataSource mappings (DynamoDB) (#2906))
       "type": "object"
     },
     "DynamoDBConfig": {
@@ -5966,8 +5993,67 @@
       "title": "Resource",
       "type": "object"
     },
+<<<<<<< HEAD
     "samtranslator__schema__aws_serverless_httpapi__Auth": {
 >>>>>>> 1261e4a1 (feat: create high level AppSync::GraphQLApi properties mapping (#2803)):samtranslator/schema/sam.schema.json
+=======
+    "schema_source__aws_serverless_graphqldatasource__Properties": {
+      "additionalProperties": false,
+      "properties": {
+        "ApiId": {
+          "$ref": "#/definitions/PassThroughProp"
+        },
+        "Description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "DynamoDBConfig": {
+          "$ref": "#/definitions/DynamoDBConfig"
+        },
+        "Name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "ServiceRoleArn": {
+          "title": "Servicerolearn",
+          "type": "string"
+        },
+        "Type": {
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ApiId",
+        "Type",
+        "DynamoDBConfig"
+      ],
+      "title": "Properties",
+      "type": "object"
+    },
+    "schema_source__aws_serverless_graphqldatasource__Resource": {
+      "additionalProperties": false,
+      "properties": {
+        "Properties": {
+          "$ref": "#/definitions/schema_source__aws_serverless_graphqldatasource__Properties"
+        },
+        "Type": {
+          "enum": [
+            "AWS::Serverless::GraphQLDataSource"
+          ],
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "Type",
+        "Properties"
+      ],
+      "title": "Resource",
+      "type": "object"
+    },
+    "schema_source__aws_serverless_httpapi__Auth": {
+>>>>>>> dc8e028e (feat: make AppSync::DataSource mappings (DynamoDB) (#2906))
       "additionalProperties": false,
       "properties": {
         "Authorizers": {
@@ -7673,8 +7759,15 @@
             "$ref": "#/definitions/samtranslator__schema__aws_serverless_graphqlapi__Resource"
           },
           {
+<<<<<<< HEAD
             "$ref": "#/definitions/samtranslator__schema__any_cfn_resource__Resource"
 >>>>>>> 1261e4a1 (feat: create high level AppSync::GraphQLApi properties mapping (#2803)):samtranslator/schema/sam.schema.json
+=======
+            "$ref": "#/definitions/schema_source__aws_serverless_graphqldatasource__Resource"
+          },
+          {
+            "$ref": "#/definitions/schema_source__any_cfn_resource__Resource"
+>>>>>>> dc8e028e (feat: make AppSync::DataSource mappings (DynamoDB) (#2906))
           }
         ]
       },
