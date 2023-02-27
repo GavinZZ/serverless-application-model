@@ -5707,7 +5707,7 @@
       "title": "ScheduleV2EventProperties",
       "type": "object"
     },
-    "schema_source__aws_serverless_graphqlapi__Auth": {
+    "samtranslator__internal__schema_source__aws_serverless_graphqlapi__Auth": {
       "additionalProperties": false,
       "properties": {
         "Type": {
@@ -5721,11 +5721,11 @@
       "title": "Auth",
       "type": "object"
     },
-    "schema_source__aws_serverless_graphqlapi__Properties": {
+    "samtranslator__internal__schema_source__aws_serverless_graphqlapi__Properties": {
       "additionalProperties": false,
       "properties": {
         "Auth": {
-          "$ref": "#/definitions/schema_source__aws_serverless_graphqlapi__Auth"
+          "$ref": "#/definitions/samtranslator__internal__schema_source__aws_serverless_graphqlapi__Auth"
         },
         "Name": {
           "title": "Name",
@@ -5754,11 +5754,11 @@
       "title": "Properties",
       "type": "object"
     },
-    "schema_source__aws_serverless_graphqlapi__Resource": {
+    "samtranslator__internal__schema_source__aws_serverless_graphqlapi__Resource": {
       "additionalProperties": false,
       "properties": {
         "Properties": {
-          "$ref": "#/definitions/schema_source__aws_serverless_graphqlapi__Properties"
+          "$ref": "#/definitions/samtranslator__internal__schema_source__aws_serverless_graphqlapi__Properties"
         },
         "Type": {
           "enum": [
@@ -5775,7 +5775,7 @@
       "title": "Resource",
       "type": "object"
     },
-    "schema_source__aws_serverless_graphqldatasource__Properties": {
+    "samtranslator__internal__schema_source__aws_serverless_graphqldatasource__Properties": {
       "additionalProperties": false,
       "properties": {
         "ApiId": {
@@ -5809,11 +5809,11 @@
       "title": "Properties",
       "type": "object"
     },
-    "schema_source__aws_serverless_graphqldatasource__Resource": {
+    "samtranslator__internal__schema_source__aws_serverless_graphqldatasource__Resource": {
       "additionalProperties": false,
       "properties": {
         "Properties": {
-          "$ref": "#/definitions/schema_source__aws_serverless_graphqldatasource__Properties"
+          "$ref": "#/definitions/samtranslator__internal__schema_source__aws_serverless_graphqldatasource__Properties"
         },
         "Type": {
           "enum": [
@@ -5830,7 +5830,7 @@
       "title": "Resource",
       "type": "object"
     },
-    "schema_source__aws_serverless_httpapi__Auth": {
+    "samtranslator__internal__schema_source__aws_serverless_httpapi__Auth": {
       "additionalProperties": false,
       "properties": {
         "Authorizers": {
