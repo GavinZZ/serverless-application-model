@@ -544,23 +544,6 @@ class SamResourceMacro(ResourceMacro, metaclass=ABCMeta):
                 "input.",
             )
 
-    def _resolve_string_parameter(
-        self,
-        intrinsics_resolver: IntrinsicsResolver,
-        parameter_value: Optional[Union[str, Dict[str, Any]]],
-        parameter_name: str,
-    ) -> Optional[Union[str, Dict[str, Any]]]:
-        if not parameter_value:
-            return parameter_value
-        value = intrinsics_resolver.resolve_parameter_refs(parameter_value)
-
-        if not isinstance(value, str) and not isinstance(value, dict):
-            raise InvalidResourceException(
-                self.logical_id,
-                "Could not resolve parameter for '{}' or parameter is not a String.".format(parameter_name),
-            )
-        return value
-
 
 class ResourceTypeResolver:
     """ResourceTypeResolver maps Resource Types to Resource classes, e.g. AWS::Serverless::Function to
