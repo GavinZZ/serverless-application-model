@@ -18,8 +18,8 @@ from samtranslator.internal.model.appsync import (
     GraphQLSchema,
     LogConfigType,
 )
-from samtranslator.internal.types import GetManagedPolicyMap
 from samtranslator.internal.intrinsics import resolve_string_parameter_in_resource
+from samtranslator.internal.types import GetManagedPolicyMap
 from samtranslator.intrinsics.resolver import IntrinsicsResolver
 from samtranslator.metrics.method_decorator import cw_timer
 from samtranslator.model import (
