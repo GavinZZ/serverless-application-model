@@ -5976,6 +5976,17 @@
           "$ref": "#/definitions/samtranslator__internal__schema_source__aws_serverless_graphqlapi__Auth"
 >>>>>>> cb9be389 (move schema files over)
         },
+        "Logging": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Logging"
+            },
+            {
+              "type": "boolean"
+            }
+          ],
+          "title": "Logging"
+        },
         "Name": {
           "title": "Name",
           "type": "string"

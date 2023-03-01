@@ -27,6 +27,7 @@ from samtranslator.internal.model.appsync import (
     DynamoDBConfigType,
     GraphQLApi,
     GraphQLSchema,
+    LogConfigType,
 )
 from samtranslator.intrinsics.resolver import IntrinsicsResolver
 from samtranslator.metrics.method_decorator import cw_timer
