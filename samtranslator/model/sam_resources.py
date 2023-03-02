@@ -10,7 +10,6 @@ import samtranslator.model.eventsources.push
 import samtranslator.model.eventsources.scheduler
 from samtranslator.feature_toggle.feature_toggle import FeatureToggle
 from samtranslator.internal.intrinsics import resolve_string_parameter_in_resource
-from samtranslator.internal.types import GetManagedPolicyMap
 from samtranslator.internal.model.appsync import (
     SUPPORTED_DATASOURCES,
     DataSource,
@@ -20,6 +19,7 @@ from samtranslator.internal.model.appsync import (
     GraphQLSchema,
     LogConfigType,
 )
+from samtranslator.internal.types import GetManagedPolicyMap
 from samtranslator.intrinsics.resolver import IntrinsicsResolver
 from samtranslator.metrics.method_decorator import cw_timer
 from samtranslator.model import (
@@ -88,7 +88,6 @@ from samtranslator.model.types import IS_DICT, IS_STR, PassThrough, any_type, di
 from samtranslator.model.xray_utils import get_xray_managed_policy_name
 from samtranslator.translator import logical_id_generator
 from samtranslator.translator.arn_generator import ArnGenerator
-from samtranslator.model.appsync import GraphQLApi, Auth
 from samtranslator.utils.types import Intrinsicable
 from samtranslator.validator.value_validator import sam_expect
 
