@@ -19,7 +19,6 @@ from samtranslator.internal.model.appsync import (
     LogConfigType,
 )
 from samtranslator.internal.intrinsics import resolve_string_parameter_in_resource
-from samtranslator.internal.types import GetManagedPolicyMap
 from samtranslator.internal.model.appsync import (
     SUPPORTED_DATASOURCES,
     DataSource,
@@ -29,6 +28,7 @@ from samtranslator.internal.model.appsync import (
     GraphQLSchema,
     LogConfigType,
 )
+from samtranslator.internal.types import GetManagedPolicyMap
 from samtranslator.intrinsics.resolver import IntrinsicsResolver
 from samtranslator.metrics.method_decorator import cw_timer
 from samtranslator.model import (
@@ -66,38 +66,6 @@ from samtranslator.model.connector_profiles.profile import (
     profile_replace,
     verify_profile_variables_replaced,
 )
-
-import samtranslator.model.eventsources
-import samtranslator.model.eventsources.pull
-import samtranslator.model.eventsources.push
-import samtranslator.model.eventsources.cloudwatchlogs
-import samtranslator.model.eventsources.scheduler
-from .api.api_generator import ApiGenerator
-from .api.http_api_generator import HttpApiGenerator
-from .packagetype import ZIP, IMAGE
-from .s3_utils.uri_parser import construct_s3_location_object, construct_image_code_object
-from .tags.resource_tagging import get_tag_list
-from samtranslator.metrics.method_decorator import cw_timer
-from samtranslator.model import (
-    ResourceResolver,
-    PassThroughProperty,
-    PropertyType,
-    SamResourceMacro,
-    Resource,
-    ResourceTypeResolver,
-    Property,
-)
-from samtranslator.model.apigateway import (
-    ApiGatewayDeployment,
-    ApiGatewayStage,
-    ApiGatewayDomainName,
-    ApiGatewayUsagePlan,
-    ApiGatewayUsagePlanKey,
-    ApiGatewayApiKey,
-)
-from samtranslator.model.apigatewayv2 import ApiGatewayV2Stage, ApiGatewayV2DomainName
-from samtranslator.model.architecture import ARM64, X86_64
-from samtranslator.model.cloudformation import NestedStack
 from samtranslator.model.dynamodb import DynamoDBTable
 from samtranslator.model.exceptions import InvalidEventException, InvalidResourceException
 from samtranslator.model.iam import IAMManagedPolicy, IAMRole, IAMRolePolicies
