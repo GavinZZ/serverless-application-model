@@ -9,15 +9,6 @@ import samtranslator.model.eventsources.pull
 import samtranslator.model.eventsources.push
 import samtranslator.model.eventsources.scheduler
 from samtranslator.feature_toggle.feature_toggle import FeatureToggle
-from samtranslator.internal.model.appsync import (
-    SUPPORTED_DATASOURCES,
-    DataSource,
-    DeltaSyncConfigType,
-    DynamoDBConfigType,
-    GraphQLApi,
-    GraphQLSchema,
-    LogConfigType,
-)
 from samtranslator.internal.intrinsics import resolve_string_parameter_in_resource
 from samtranslator.internal.model.appsync import (
     SUPPORTED_DATASOURCES,
